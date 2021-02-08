@@ -312,6 +312,7 @@ body {
 }
 
 h1 {
+  width: 550px;
   font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
@@ -351,6 +352,7 @@ h1 {
   border: 1px solid var(--secondary-lines-hue);
   border-radius: 999px;
   transition: 0.25s;
+  text-align: center;
 }
 
 .button:hover {
@@ -366,6 +368,7 @@ h1 {
   border: 0;
   border-radius: 999px;
   transition: 0.25s;
+  text-align: center;
 }
 
 .button.btn-large:hover {
@@ -377,7 +380,7 @@ h1 {
 
 /* ========================================= HEADER START =============================================== */
 .header {
-  padding: 70px 0;
+  padding: 50px 0;
   background-color: var(--secondary-color);
 }
 
@@ -393,11 +396,14 @@ h1 {
   justify-content: space-between;
 }
 
-.nav a, .header-link {
+.nav a,
+.header-link {
   transition: 0.25s;
+  padding: 20px 0;
 }
 
-.nav a:hover, .header-link:hover {
+.nav a:hover,
+.header-link:hover {
   color: var(--primary-color);
 }
 
@@ -413,3 +419,45 @@ h1 {
   margin-right: 40px;
 }
 /* ========================================= HEADER END =============================================== */
+
+/* ========================================= HERO START =============================================== */
+.hero {
+  position: relative;
+  padding-bottom: 150px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--secondary-color);
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 100%;
+  transform: skewY(-7deg);
+  z-index: -1;
+  border-bottom: 15px solid var(--primary-color);
+}
+
+.hero-text {
+  width: 550px;
+  margin-bottom: 50px;
+}
+
+.hero > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-inf {
+  margin-right: 80px;
+}
+
+.hero > .container > img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -105px;
+}
+/* ========================================= HERO END =============================================== */
