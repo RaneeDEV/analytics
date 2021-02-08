@@ -288,6 +288,7 @@ button {
 
 body {
   font-family: "Roboto", var(--system-fonts), sans-serif;
+  background-color: var(--bg-color);
   color: var(--secondary-text-hue);
 }
 
@@ -304,6 +305,7 @@ body {
   --secondary-color: hsl(var(--sec-hue), 57%, 21%);
   --secondary-text-hue: hsl(var(--sec-hue), 23%, 63%);
   --secondary-lines-hue: hsl(var(--sec-hue), 36%, 43%);
+  --bg-color: hsl(calc(var(--sec-hue) + 15), 36%, 95%);
   --white: #fff;
   --system-fonts: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
@@ -493,3 +495,29 @@ h1 {
   margin-bottom: 25px;
 }
 /* ========================================= FEATURES END =============================================== */
+
+/* ========================================= ABOUT START =============================================== */
+.about-card-info {
+  width: 480px;
+}
+
+.about-card-wrap > :nth-child(n + 2) {
+  margin-top: 120px;
+}
+
+.about-card-wrap > :nth-child(2) {
+  flex-direction: row-reverse;
+  margin-left: -40px;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-card > img {
+  width: 600px;
+  height: 410px;
+}
+/* ========================================= ABOUT END =============================================== */
