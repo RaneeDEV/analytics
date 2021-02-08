@@ -452,7 +452,7 @@ h1 {
 }
 
 .hero-inf {
-  margin-right: 80px;
+  margin-right: 73px;
 }
 
 .hero > .container > img {
@@ -461,3 +461,35 @@ h1 {
   margin-bottom: -105px;
 }
 /* ========================================= HERO END =============================================== */
+
+/* ========================================= FEATURES START =============================================== */
+.features {
+  padding-top: 50px;
+  padding-bottom: 130px;
+}
+
+.features-info {
+  text-align: center;
+}
+
+.features-info-text {
+  margin-bottom: 80px;
+}
+
+.features-card-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features-card {
+  width: 360px;
+  text-align: center;
+}
+
+.features-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+}
+/* ========================================= FEATURES END =============================================== */
