@@ -543,7 +543,7 @@ h1 {
 
 /* ========================================= PRICING START =============================================== */
 .pricing {
-  padding: 250px 0;
+  padding-top: 250px;
   position: relative;
 }
 
@@ -570,6 +570,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 100px;
 }
 
 .pricing-card {
@@ -614,3 +615,39 @@ h1 {
   color: var(--secondary-color);
 }
 /* ========================================= PRICING END =============================================== */
+
+/* ========================================= FOOTER START =============================================== */
+.footer {
+  background-color: var(--secondary-color);
+}
+
+.footer > .container {
+  border-top: 1px solid var(--secondary-lines-hue);
+}
+
+.footer-navbar,
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+
+.footer-nav > :nth-child(n + 2),
+.footer-links-wrap > :nth-child(n + 2) {
+  margin-left: 35px;
+}
+
+.footer-links-wrap img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-nav a:hover {
+  color: var(--primary-color);
+}
+
+.footer-links-wrap a:hover {
+  opacity: 0.5;
+}
+/* ========================================= FOOTER END =============================================== */
