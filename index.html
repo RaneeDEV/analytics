@@ -24,28 +24,29 @@
     <header class="header">
       <div class="container">
         <nav class="navbar">
-          <ul class="nav">
-            <li>
-              <a href="index.html" class="logo">
-                <img
-                  src="./img/logo.svg"
-                  alt="Analytics Logo"
-                  width="1"
-                  height="1"
-                  loading="lazy"
-                />
-              </a>
-            </li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Partfolio</a></li>
-          </ul>
-          <div class="header-links">
-            <a href="#" class="header-link">Sing In</a>
-            <button class="button">Sing up</button>
+          <a href="index.html" class="logo">
+            <img
+              src="./img/logo.svg"
+              alt="Analytics Logo"
+              width="1"
+              height="1"
+              loading="lazy"
+            />
+          </a>
+          <div class="burger-menu" id="burgerMenu">
+            <ul class="nav">
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Partfolio</a></li>
+            </ul>
+            <div class="header-links">
+              <a href="#" class="header-link">Sing In</a>
+              <button class="button">Sing up</button>
+            </div>
           </div>
+          <button class="button burger-btn" id="burgerBtn">&equiv;</button>
         </nav>
       </div>
     </header>
@@ -74,7 +75,7 @@
           />
         </div>
       </section>
-    </div> 
+    </div>
     <section class="features">
       <div class="container">
         <div class="features-info">
@@ -342,6 +343,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      const burgerBtn = document.getElementById("burgerBtn");
+      const burgerMenu = document.getElementById("burgerMenu");
+      burgerBtn.addEventListener("click", (event) => {
+        document.body.classList.toggle("burger-open");
+      });
+      
     </script>
   </body>
 </html>
