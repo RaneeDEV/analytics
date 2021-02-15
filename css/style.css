@@ -694,6 +694,9 @@ h1 {
   }
   .hero > .container > img {
     position: static;
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
   }
 }
 /* // Small devices (column-like) (landscape phones, less than 768px) */
@@ -707,9 +710,6 @@ h1 {
   }
   .hero {
     padding-top: calc(var(--shift) + 60px);
-  }
-  .hero > .container > img {
-    height: 100%;
   }
   .nav > :nth-child(1) {
     margin-left: 0px;
@@ -777,25 +777,11 @@ h1 {
   .text {
     font-size: 15px;
   }
-  .button.btn-large{
-    width: 180px;
-    padding: 12px;
-  }
-  .hero > .container > img {
-    width: 100%;
-    margin-left: 50px;
-  }
-  .features-card-wrap {
-    flex-direction: column;
-  }
-  .features-card-wrap > :nth-child(n + 1) {
-    margin-bottom: 5%;
-  }
-}
-/* // XX-Small devices (portrait phones (iPhone 5/5s, SE), less than 321px) */
-@media (max-width: 320px) {
   .logo {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
+  }
+  .navbar{
+    flex-direction: column;
   }
   .features-card{
     width: 100%;
@@ -807,19 +793,31 @@ h1 {
   .about-card:nth-child(2) {
     width: 100%;
   }
+  .button.btn-large{
+    width: 180px;
+    padding: 12px;
+  }
   .pricing{
     padding-top: 115px;
   }
+  .pricing-card{
+
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+  }
+  .features-card-wrap {
+    flex-direction: column;
+  }
+  .features-card-wrap > :nth-child(n + 1) {
+    margin-bottom: 5%;
+  }
+}
+/* // XX-Small devices (portrait phones (iPhone 5/5s, SE), less than 321px) */
+@media (max-width: 320px) {
   .pricing-cards-wrap>:nth-child(n+1){
     margin-left: 0px;
     margin-bottom: 10%;
-  }
-  .pricing-card{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 35px;
   }
   .footer-logo{
     padding-bottom: 20px;
