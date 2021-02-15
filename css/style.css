@@ -246,6 +246,7 @@ body {
   font-family: "Roboto", var(--system-fonts), sans-serif;
   background-color: var(--bg-color);
   color: var(--secondary-text-hue);
+  overflow-x: hidden
 }
 
 .container {
@@ -270,7 +271,6 @@ body {
 }
 
 h1 {
-  width: 550px;
   font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
@@ -306,8 +306,8 @@ h1 {
 }
 
 .button {
-  width: 160px;
-  height: 40px;
+  min-width: 160px;
+  padding: 12px 30px;
   cursor: pointer;
   color: var(--secondary-text-hue);
   background-color: transparent;
@@ -323,14 +323,15 @@ h1 {
 }
 
 .button.btn-large {
-  width: 240px;
-  height: 50px;
+  min-width: 240px;
+  padding: 15px 30px;
   background-color: var(--primary-color);
   color: var(--white);
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 999px;
   transition: 0.25s;
   text-align: center;
+  padding: 15px 30px;
 }
 
 .button.btn-large:hover {
@@ -354,8 +355,9 @@ h1 {
 
 /* ========================================= HEADER START =============================================== */
 .header {
-  padding: 50px 0;
-  background: var(--secondary-color);
+  padding-top: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .logo img {
@@ -375,6 +377,7 @@ h1 {
 .header-link {
   transition: 0.25s;
   padding: 20px 0;
+  font-size: 16px;
 }
 
 .nav a:hover,
@@ -398,51 +401,59 @@ h1 {
 /* ========================================= HERO START =============================================== */
 .hero {
   position: relative;
+  --shift: 600px;
+  margin-top: calc(var(--shift) * -1);
+  padding-top: calc(var(--shift) + 150px);
   padding-bottom: 150px;
+  background: linear-gradient(
+    0deg,
+    var(--primary-color) 17px,
+    var(--secondary-color) 17px
+  );
+  transform: skewY(-7deg);
 }
 
-.hero::before {
-  content: "";
+.hero::before{
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--secondary-color);
+  top: 12%;
+  left: -4%;
   width: 100%;
   height: 100%;
-  transform-origin: 0 100%;
-  transform: skewY(-7deg);
-  z-index: -1;
-  border-bottom: 15px solid var(--primary-color);
-}
-
-.hero-text {
-  width: 550px;
-  margin-bottom: 50px;
-}
-
-.hero > .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: url('../img/small-deco.webp') no-repeat 0 0 / 660px 660px;
 }
 
 .hero-inf {
-  margin-right: 73px;
+  width: 550px;
+}
+
+.hero-text {
+  margin-bottom: 50px;
+}
+
+.hero >.container {
+  transform: skewY(7deg);
+  position: relative;
 }
 
 .hero > .container > img {
-  width: 100%;
-  height: 100%;
+  width: 875px;
+  height: 555px;
+  position: absolute;
+  top: -30%;
+  left: 54%;
   object-fit: cover;
-  box-shadow: var(--shadow);
-  margin-bottom: -40px;
+  filter: drop-shadow(2px 4px 6px hsla(225, 57%, 21%, 0.2));
+}
+
+.hero > .container > img:hover{
+  transform: translateX(-15px);
 }
 /* ========================================= HERO END =============================================== */
 
 /* ========================================= FEATURES START =============================================== */
 .features {
-  padding-top: 50px;
-  padding-bottom: 130px;
+  padding: 130px 0;
 }
 
 .features-info {
@@ -474,7 +485,7 @@ h1 {
 
 /* ========================================= ABOUT START =============================================== */
 .about {
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
 
 .about-card-info {
@@ -499,14 +510,14 @@ h1 {
   width: 600px;
   height: 410px;
   object-fit: cover;
-  box-shadow: var(--shadow);
+  filter: drop-shadow(2px 4px 6px hsla(225, 57%, 21%, 0.2));
 }
 /* ========================================= ABOUT END =============================================== */
 
 /* ========================================= PRICING START =============================================== */
-.pricing {
-  padding-top: 270px;
+.pricing{
   position: relative;
+  padding-top: 250px;
 }
 
 .pricing::before {
@@ -543,7 +554,6 @@ h1 {
   --opacity-hue: 220;
   background: hsla(var(--opacity-hue), 0%, 0%, 0.2);
   border-radius: 30px;
-  transition: 0.3s;
 }
 
 .card-title {
@@ -560,19 +570,19 @@ h1 {
   border-bottom: 1px solid var(--secondary-text-hue);
 }
 
-.card-number-price, .currency {
+.card-number-price,
+.currency {
   font-weight: 700;
   font-size: 60px;
   line-height: 1.15;
 }
 
-.currency{
+.currency {
   font-size: 30px;
 }
 
 .pricing-card:hover {
   background-color: var(--white);
-  transform: translateY(-10px);
   box-shadow: var(--shadow);
 }
 
@@ -583,9 +593,10 @@ h1 {
 /* ========================================= PRICING END =============================================== */
 
 /* ========================================= FOOTER START =============================================== */
-.footer {
+.footer{
   background-color: var(--secondary-color);
   padding-bottom: 60px;
+  position: relative;
 }
 
 .footer > .container {
@@ -615,8 +626,9 @@ h1 {
   color: var(--primary-color);
 }
 
-.footer-nav a, .footer-links-wrap a{
-  transition: .25s;
+.footer-nav a,
+.footer-links-wrap a {
+  transition: 0.25s;
 }
 
 .footer-links-wrap a:hover {
