@@ -47,7 +47,15 @@
                 <button class="button">Sing up</button>
               </div>
             </div>
-            <button class="button burger-btn" id="burgerBtn">&equiv;</button>
+            <button
+              class="button burger-btn"
+              id="burgerBtn"
+              data-aos="fade-left"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
+              &equiv;
+            </button>
           </nav>
         </div>
       </header>
@@ -57,9 +65,9 @@
             <div class="hero-inf">
               <h1>Monitor your business on real-time dashboard</h1>
               <p class="text hero-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-                nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam
-                vitae nibh nunc mattis imperdiet sed nullam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Elementum nisi aliquet volutpat pellentesque volutpat est.
+                Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
               </p>
               <button class="button btn-large">Try for Free</button>
             </div>
@@ -121,8 +129,8 @@
               />
               <h3 class="subtitle">Widget System</h3>
               <p class="text">
-                Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae
-                et, tortor pulvinar risus pulvinar.
+                Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+                Vitae et, tortor pulvinar risus pulvinar.
               </p>
             </div>
             <div class="features-card">
@@ -230,8 +238,8 @@
             <div class="pricing-info">
               <h2 class="title pricing-title lightnes-text">Pricing Plans</h2>
               <p class="text pricing-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-                nisi aliquet <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Elementum nisi aliquet <br />
                 volutpat pellentesque volutpat est.
               </p>
             </div>
@@ -290,7 +298,7 @@
             </div>
           </section>
           <nav class="footer-navbar">
-            <a href="/" class="footer-logo logo">
+            <a href="/" class="footer-logo">
               <img
                 src="./img/footer-logo.svg"
                 alt="Analytics Footer Logo"
@@ -342,7 +350,7 @@
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
         AOS.init();
-  
+
         const burgerBtn = document.getElementById("burgerBtn");
         const burgerMenu = document.getElementById("burgerMenu");
         burgerBtn.addEventListener("click", (event) => {
